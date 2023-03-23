@@ -1,0 +1,57 @@
+---
+title: "Slack"
+description: "Slack is a platform for team communication: everything in one place, instantly searchable, available wherever you go. Offering instant messaging, document sharing and knowledge search for modern teams"
+---
+
+
+
+You can find your Slack app credentials by visiting your [Slack App dashboard](https://api.slack.com/apps).
+
+**Note:** You'll need to create a new Slack app if you don't already have one.
+
+You'll need the following information to set up your Slack App with Cobalt:
+
+* Client ID
+
+* Client Secret
+
+* Scopes Requested
+
+### Add the Redirect URL to your Slack app
+
+Cobalt provides a redirect URL to send information to your Slack app. To add the redirect URL to your Slack app:
+
+1\. Copy the link under "**Redirect URL"** in your integration settings in Cobalt. The Redirect URL is:
+
+![](/images/cobalt/reference/integration-catalogue/Screenshot%202023-01-11%20at%202.22.27%20PM.png)
+
+2\. Log in to your [Slack App dashboard](https://api.slack.com/apps) and select your Slack app.
+
+3\. In your Slack App page sidebar, navigate to **OAuth & Permissions > Redirect URLs**.
+
+4\. Press "**Add New Redirect URL**".
+
+5\. Paste-in the redirect URL from Cobalt. The redirect URL can be found in Step 1.
+
+6\. Press "**Add**", then press "**Save URLs**".
+
+![](/images/cobalt/reference/integration-catalogue/Screenshot%202023-01-11%20at%202.27.24%20PM.png)
+
+Slack provides you with the **Client ID** and **Client Secret** needed for the next steps after adding the redirect URL to your application. You can find the credentials under **Basic Information > App Credentials** in the Slack app sidebar.
+
+### Add your Slack app to Cobalt
+
+1\. Select **Slack** from the **Integrations Catalog**.
+
+2\. Under **Integrations > Connected Integrations >** _**{YOUR\_APP}**_ **\>** **Settings**, fill out your credentials from the end of Step 1 in their respective sections:
+
+* **Client ID:** Found under Basic Information > App Credentials > Client ID on your Slack App page.
+
+* **Client Secret:** Found under Basic Information > App Credentials > Client Secret on your Slack App page.
+
+* **Permissions:** Select the scopes you've requested for your application.
+
+Press the blue "**Connect**" button to save your credentials.
+
+****
+

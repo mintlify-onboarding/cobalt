@@ -1,0 +1,58 @@
+---
+title: "Quickbooks"
+description: "QuickBooks is an accounting software package developed and marketed by Intuit. QuickBooks online offer cloud-based versions that accept business payments, manage and pay bills, and payroll functions."
+---
+
+You can find your QuickBooks app credentials by visiting your [QuickBooks developer portal](https://developer.intuit.com/myapps).
+
+You'll need the following information to set up your QuickBooks App with Cobalt Connect:
+
+* Client ID
+
+* Client Secret
+
+* Scopes Requested
+
+### Prerequisites
+
+* An [Intuit Developer account](https://developer.intuit.com/app/developer/homepage).
+
+* A QuickBooks app.
+
+### Add the Redirect URL to your QuickBooks app
+
+Cobalt provides a redirect URL to send information to your app. To add the redirect URL to your QuickBooks app:
+
+1\. Copy the link under "**Redirect URL**" in your integration settings in Cobalt. The Redirect URL is:
+
+```
+https://passport.useparagon.com/oauth
+```
+
+2\. Log in to your [QuickBooks developer dashboard](https://developer.intuit.com/app/developer/dashboard) and select your application.
+
+3\. Depending on whether your application is in **Development** or **Production**, go to **Keys & OAuth > Redirect URIs**.
+
+4\. Paste-in Cobalt redirect URL found in Step 1.
+
+5\. Press the blue **Save** button at the bottom of the page to save your updates.
+
+Could not load image
+
+### Add your QuickBooks app to Cobalt
+
+Under **Integrations > Connected Integrations >** _**{YOUR\_APP}**_ **\>** **Settings**, fill out your credentials from the end of Step 1 in their respective sections:
+
+* **Client ID:** Found under Keys & OAuth > Keys > Client ID on your QuickBooks App page.
+
+* **Client Secret:** Found under Keys & OAuth > Keys > Client Secret on your QuickBooks App page.
+
+* **Permissions:** Select the scopes you've requested for your application.
+
+Press the blue "**Connect**" button to save your credentials.
+
+**Note:** Leaving the Client ID and Client Secret blank will use Cobalt development keys.
+
+Could not load image
+
+## 

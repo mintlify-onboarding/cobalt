@@ -1,0 +1,81 @@
+---
+title: "Add to your frontend"
+---
+
+### Step 1: Server - Generate a link token
+
+In your backend, create a request to fetch a `link_token` from Cobalt. 
+
+Include the following parameters:
+
+* `linked_account_id` : A unique id for the entity that was used while creating the Linked Account.
+
+This request will return the following:
+
+* `link_token`: Temporary token initializing your user’s integration session.
+
+Javascript
+
+```
+/**
+ * getTokenForLinkedAccount
+ * @param {String} linked_account_id
+ * @returns {Promise}
+ */
+const getTokenForLinkedAccount = async (linked_account_id) => {
+  try{
+    return await Client.getTokenForLinkedAccount({
+        linked_account_id: linked_account_id
+    })
+  }catch(error){
+      //Catch any error
+  }
+};
+```
+
+
+### Step 2: Server - Display applications
+
+
+In your backend, create a request to fetch a list of applications added in an embed from Cobalt. 
+
+Include the following parameters:
+
+* `linked_account_id` : A unique id for the entity that was used while creating the Linked Account.
+
+Javascript
+
+```
+/**
+ * Get Applications
+ * @param {String} linked_account_id expects an email id or unique id.
+ * @param {String} page page number to get.
+ * @param {String} limit number of records to fetch.
+ * @returns {Promise}
+ */
+const getApplications = async (linked_account_id, page, limit) => {
+  try{
+    return await Client.getApplications(linked_account_id, {
+        page:page,
+        limit:limit,
+    })
+  }catch(error){
+    //Catch any error
+  }
+};
+```
+
+
+### Step 3: Client - Add link flow to your frontend
+
+In your frontend, use our frontend SDK [@cobaltio/react-cobalt-js](https://www.npmjs.com/package/@cobaltio/react-cobalt-js) to open your user’s integration authorization session and template installer.
+
+You can also use your own components for rendering by using our custom JavaScript SDK [@cobaltio/cobalt-js](https://www.npmjs.com/package/@cobaltio/cobalt-js).
+
+[![](/images/cobalt/getting-started)npm: @cobaltio/react-cobalt-jsnpm](https://www.npmjs.com/package/@cobaltio/react-cobalt-js)
+
+React SDK
+
+[![](/images/cobalt/getting-started)npm: @cobaltio/cobalt-jsnpm](https://www.npmjs.com/package/@cobaltio/cobalt-js)
+
+Custom Javascript SDK

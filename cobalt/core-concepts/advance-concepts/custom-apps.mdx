@@ -1,0 +1,79 @@
+---
+title: "Custom Apps"
+---
+
+Custom Apps allow you to build your own custom integration with any app provider on Cobalt, even if it's not natively supported by our integration catalog. **Once defined, custom apps can be used accross multiple workflows.** This is useful in cases where you may want the same app to be used in multiple workflows.
+
+Similar to natively supported integration on Cobalt, Custom Apps provide the following features:
+
+* **Embedded App** for your customers to activate and configure the integration in your application.
+
+* **Fully managed authentication** with OAuth 2.0 or API Keys.
+
+* **Visual workflow editor** for creating custom integration logic.
+
+
+## Building a Custom App
+
+The general prerequisites for building a Custom Integration with any app provider on Cobalt are:
+
+* The app provider must have a public API.
+
+* Have access to the app provider's API documentation.
+
+* If the app provider uses OAuth authentication, create a developer account and developer application from the app provider.
+
+To start building a Custom Integration, click the **build your own custom app** button at the top of your Apps page in cobalt. You'll need to complete the following steps:
+
+### Step 1: Basic Info
+
+You'll first need to provide some basic information about the app provider that will appear during the integration.
+
+* **Name** \-A short name for the app provider.
+
+* **Description** \- A short description for what the app provider does.
+
+* **App Icon** \- Only SVG formats accepted.
+
+### Step 2: Setup Authentication
+
+Select a method of authentication for your app provider. You can usually find this in your app provider's API documentation. There are 3 types of Auth mechanism
+
+* OAuth 2.0
+
+* OAuth Client Credentials
+
+* API Key
+
+If you are building custom for your own application and do not want to use authentication mechanism, proceed by selecting "No Auth". 
+
+#### OAuth 2.0
+
+OAuth 2.0 is typically used when a user needs to authenticate access to their account. For example, a user signing into Salesforce so that your application can make changes on their behalf.
+
+Specify the sign-in URL, also known as the **Authorization URL**, that this integration uses to begin the OAuth 2.0 authentication flow. If the URL includes a value that must be supplied by your end-user, use the **Advanced Options** to add input fields.
+
+You can usually find the OAuth credentials for your selected provider in their API Documentation. You'll need access to the following credentials:
+
+* Auth URL
+
+* Access Token URL
+
+* Client ID
+
+* Client Secret
+
+* Scopes Requested
+
+#### OAuth Client Credentials
+
+Specify the URL that this integration uses to exchange an authorization code for access tokens, also known as the **Access Token URL**. The cobalt link flow prompt your user for their Client ID and Client Secret needed to validate the authentication. 
+
+#### API Key Based Authentication
+
+Some app providers use **API keys** for authorization. An API key is a token that a client provides when making API calls. API keys are typically found within the app provider's account settings. The cobalt link flow prompt your user for their API key needed to validate the authentication.
+
+### Step 3: Setting up Trigger & Actions
+
+
+## 

@@ -1,0 +1,84 @@
+---
+title: "Google Sheet"
+description: "Create, edit, and share spreadsheets wherever you are with Google Sheets, and get automated insights from your data."
+---
+
+
+
+| Service ID google\_sheet | StatusLive                                                                                                                                                                                                                       |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Auth types OAuth 2.0     | Scopes**People API, v1 -** https://www.googleapis.com/auth/userinfo.email**Google Sheets API, v4**https://www.googleapis.com/auth/spreadsheets**Google Drive API, v4 (Read Only)**https://www.googleapis.com/auth/drive.readonly |
+| Supported Trigger        | Supported Trigger - Create a spreadsheet - Add new row - Update a value                                                                                                                                                          |
+
+You can find your Google app credentials by visiting your [Google Cloud Console dashboard](https://console.cloud.google.com/projectselector2/home/dashboard?supportedpurview=project). 
+
+You'll need the following information to set up your Google App with Cobalt Connect:
+
+* Client ID
+
+* Client Secret
+
+* Scopes Requested
+
+**Note:** You'll need to create a new project in Google Cloud Console if you don't already have one.
+
+### Add the Redirect URL to your Google app
+
+Cobalt provides a redirect URL to send information to your Google app. To add the redirect URL to your Google app:
+
+1\. Copy the link under "**Redirect URL"** in your integration settings in Cobalt. The Redirect URL is:
+
+```
+https://passport.useparagon.com/oauth
+```
+
+2\. In your [Google Cloud Console dashboard](https://console.cloud.google.com/projectselector2/home/dashboard?supportedpurview=project), navigate to **APIs & Services > Credentials** in the sidebar.
+
+3\. Press "**\+ Create Credentials**", then select **OAuth client ID.**
+
+4\. Select "**Web application**" from the Application type drop-down menu.
+
+**Note:** You'll need to configure Google's [consent screen](https://console.developers.google.com/apis/credentials) for access to **Client ID** and **Client Secret** if you haven't already.
+
+![](/images/cobalt/reference/integration-catalogue/Selecting%20Web%20Application%20in%20Google%20OAuth.png)
+
+
+5\. Under **Authorized redirect URIs**, press the "**\+ Add URI**" button.
+
+6\. Paste-in the redirect URL from Cobalt.
+
+7\. Press the blue "**Create**" button.
+
+![](/images/cobalt/reference/integration-catalogue/Connect%20-%20Adding%20Google%20redirect%20URI%20for%20OAuth.gif)
+
+Google provides you with the **Client ID** and **Client Secret** needed for the next steps after adding the redirect URL to your project.
+
+### Enable Google Sheets API in Google Cloud Console Dashboard
+
+1\. In your [Google Cloud Console dashboard](https://console.cloud.google.com/projectselector2/home/dashboard?supportedpurview=project), navigate to **APIs & Services > Library** in the sidebar.
+
+2\. Search for "Google Sheets API" from the API Library.
+
+3\. Select the "Google Sheets API".
+
+4\. Press the blue "**Enable**" button to enable the API for your application.
+
+![](/images/cobalt/reference/integration-catalogue/Enabling%20Google%20Sheets%20API.png)
+
+### Add your Google app to Cobalt
+
+1\. Select **Google Sheets** from the **Integrations Catalog**.
+
+2\. Under **Integrations > Connected Integrations >** _**{YOUR\_APP}**_ **\>** **Settings**, fill out your credentials from the end of Step 1 in their respective sections:
+
+* **Client ID:** Found at the end of Step 1.
+
+* **Client Secret:** Found at the end of Step 1.
+
+* **Permissions:** Select the scopes you've requested for your application. They should begin with `sheets`.
+
+Press the blue "**Connect**" button to save your credentials.
+
+**Note:** Leaving the Client ID and Client Secret blank will use Cobalt development keys.
+
+## 

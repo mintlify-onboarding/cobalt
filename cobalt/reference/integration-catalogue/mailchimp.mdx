@@ -1,0 +1,45 @@
+---
+title: "MailChimp"
+---
+
+You can find your Mailchimp app credentials by visiting your [Mailchimp Account Settings](https://us9.admin.mailchimp.com/account/oauth2/).
+
+**Note:** You'll need to create a new Mailchimp app if you don't already have one.
+
+You'll need the following information to set up your Mailchimp App with Cobalt:
+
+* Client ID
+
+* Client Secret
+
+### Add the Redirect URL to your Mailchimp app
+
+Cobalt provides a redirect URL to send information to your Mailchimp app. To add the redirect URL to your Mailchimp app:
+
+1\. Copy the link under "**Redirect URL"** in your application settings in Cobalt. The Redirect URL is:
+
+```
+https://embedapi.gocobalt.io/api/v1/mailchimp/callback
+```
+
+2\. Click your account by selecting the account icon.
+
+3\. Select **Account** from the dropdown list.
+
+4\. Under **Extras > Registered apps**, select your application or create a new one if you don't already have one.
+
+5\. Under **Redirect URI**, paste-in the redirect URL from Cobalt. The redirect URL can be found in Step 1.
+
+6\. Press the green `Update` button to confirm your changes.
+
+### Add your Mailchimp app to Cobalt
+
+1\. Select **Mailchimp** from the applications.
+
+2\. Under Mailchimp **\>** **Settings**, fill out your credentials in their respective sections:
+
+![](/images/cobalt/reference/integration-catalogue/Screenshot%202022-10-18%20at%203.21.11%20PM.png)
+
+Press the blue "**Connect**" button to save your credentials.
+
+**Note:** Leaving the Client ID and Client Secret blank will use Cobalt development keys.

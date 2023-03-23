@@ -6,36 +6,123 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#",
-    "light": "#",
-    "dark": "#",
-    "anchors": { "from": "#", "to": "#" }
+    "primary": "#6129FF",
+    "light": "#D2F1E4",
+    "dark": "#093A3E",
+    "anchors": { "from": "#93D2B8", "to": "#216A70" }
   },
   "topbarCtaButton": {
-    "name": "",
-    "url": ""
+    "name": "Get Started",
+    "url": "https://www.gocobalt.io/create-account"
   },
   "topbarLinks": [
     {
-      "name": "",
-      "url": ""
+      "name": "Log In",
+      "url": "https://app.gocobalt.io/login"
     }
   ],
   "anchors": [
     {
-      "name": "",
-      "icon": "",
-      "url": ""
+      "name": "Demo",
+      "icon": "circle-play",
+      "url": "https://cal.com/cobalt/30min?duration=30"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://www.gocobalt.io/blogs/all"
     }
   ],
   "navigation": [
     {
-      "group": "",
-      "pages": [""]
+      "group": "Introduction",
+      "pages": ["cobalt/introduction"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "cobalt/getting-started/setup-app-events",
+        "cobalt/getting-started/enable-and-configure-app",
+        "cobalt/getting-started/create-a-linked-account",
+        "cobalt/getting-started/add-to-your-frontend"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "cobalt/core-concepts/linked-account",
+        "cobalt/core-concepts/default-apps",
+        {
+          "group": "User Portal",
+          "pages": [
+            "cobalt/core-concepts/user-portal",
+            "cobalt/core-concepts/user-portal/configure",
+            "cobalt/core-concepts/user-portal/field-select",
+            "cobalt/core-concepts/user-portal/field-dependent",
+            "cobalt/core-concepts/user-portal/field-mapping"
+          ]
+        },
+        {
+          "group": "Workflows",
+          "pages": [
+            "cobalt/core-concepts/workflows",
+            "cobalt/core-concepts/workflowscreating-a-workflow/",
+            "cobalt/core-concepts/workflows/triggers",
+            "cobalt/core-concepts/workflows/integration-actions",
+            "cobalt/core-concepts/workflows/workflow-actions"
+          ]
+        },
+        {
+          "group": "Advance Concepts",
+          "pages": [
+            "cobalt/core-concepts/advance-concepts/custom-apps",
+            "cobalt/core-concepts/advance-concepts/authenticated-passthrough-request"
+          ]
+        },
+
+        "cobalt/core-concepts/workflows",
+        "cobalt/core-concepts/advance-concepts"
+      ]
+    },
+    {
+      "group": "SDKs",
+      "pages": ["cobalt/sdks/backend-sdks", "cobalt/sdks/frontend-sdk"]
+    },
+    {
+      "group": "Reference",
+      "pages": [
+        {
+          "group": "Integration Catalogue",
+          "pages": [
+            "cobalt/reference/integration-catalogue",
+            "cobalt/reference/integration-catalogue/activecampaign",
+            "cobalt/reference/integration-catalogue/docusign",
+            "cobalt/reference/integration-catalogue/pipedrive",
+            "cobalt/reference/integration-catalogue/hubspot",
+            "cobalt/reference/integration-catalogue/salesforce",
+            "cobalt/reference/integration-catalogue/mailerlite",
+            "cobalt/reference/integration-catalogue/microsoft-onedrive",
+            "cobalt/reference/integration-catalogue/microsoft-teams",
+            "cobalt/reference/integration-catalogue/sendinblue",
+            "cobalt/reference/integration-catalogue/keap",
+            "cobalt/reference/integration-catalogue/mailchimp",
+            "cobalt/reference/integration-catalogue/gmail",
+            "cobalt/reference/integration-catalogue/google-calendar",
+            "cobalt/reference/integration-catalogue/google-docs",
+            "cobalt/reference/integration-catalogue/google-drive",
+            "cobalt/reference/integration-catalogue/google-sheet",
+            "cobalt/reference/integration-catalogue/quickbooks",
+            "cobalt/reference/integration-catalogue/slack",
+            "cobalt/reference/integration-catalogue/twilio"
+          ]
+        },
+        "cobalt/reference/api-reference"
+      ]
     }
   ],
   "footerSocials": {
-    "twitter": "",
-    "linkedin": ""
+    "twitter": "https://twitter.com/go_cobalt",
+    "linkedin": "https://www.linkedin.com/company/gocobalt/",
+    "website": "https://www.gocobalt.io/"
   }
 }

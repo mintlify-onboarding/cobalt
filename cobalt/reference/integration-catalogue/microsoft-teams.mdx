@@ -1,0 +1,176 @@
+---
+title: "Microsoft Teams"
+---
+
+## Setup Guide
+
+You can find your Microsoft Teams application credentials by visiting the [Microsoft Developer Portal for Teams](https://dev.teams.microsoft.com/).
+
+You'll need the following information to set up your Microsoft Teams app with Cobalt:
+
+* App ID
+
+* Bot Client ID
+
+* Bot Client Secret
+
+* Scopes Requested
+
+### Prerequisites
+
+* A [Microsoft Azure](https://azure.microsoft.com/) account
+
+* A bot registered in the Microsoft Developer Portal for Teams (_See Creating a Microsoft Teams bot for setup instructions_)
+
+### Creating a Microsoft Teams bot
+
+You will need to create a bot user in the [Microsoft Developer Portal for Teams](https://dev.teams.microsoft.com/) to build your integration.
+
+1. 1.  
+Log in to the Developer Portal for Teams using the same Microsoft account that you use to log in to the Microsoft Azure Portal.
+
+2. 2.  
+Navigate to **Tools** in the sidebar.
+
+3. 3.  
+Select **Bot Management**.
+
+4. 4.  
+Click **New Bot** and provide a name for your bot. _This is not the name that appears to your users_; we recommend appending "(Bot)" to the name for clarity.
+
+Next, you will need to associate this new bot with your Teams application.
+
+1. 1.  
+In the Developer Portal for Teams, navigate to **Apps** in the sidebar.
+
+2. 2.  
+If you do not have a Teams app yet, click **New app** and provide a name. This name will be the one displayed in the Microsoft Teams store and to your users.  
+   1. 1.  
+   In **Basic information**, you will need to minimally provide a short description and URLs for your application's website, Privacy Policy, and Terms of Use.  
+   2. 2.  
+   Click **Save** below.
+
+3. 3.  
+In your Teams app settings, navigate to **App features** (under the **Configure** section).
+
+4. 4.  
+Select **Bot**.
+
+5. 5.  
+Select the bot user you created above.
+
+6. 6.  
+Check any applicable capabilities for your bot user.
+
+7. 7.  
+Click **Save** below.
+
+8. 8.  
+Optionally, upload an icon for your app in **Branding**.
+
+![](/images/cobalt/reference/integration-catalogue/image.png)
+
+#### Testing your Microsoft Teams bot
+
+If your application is not yet published to the Microsoft Teams store, you can test your app by uploading your app's package directly into your Teams account.
+
+1. 1.  
+In the [Developer Portal for Teams](https://dev.teams.microsoft.com/), navigate to your list of Apps.
+
+2. 2.  
+Click the triple-dot menu in your app's row and click **Download app package**. Your app's package will be downloaded as a .zip file.  
+![](/images/cobalt/reference/integration-catalogue/spaces_-MCJwlyhqtCdBfCLUO0d-1223115691_uploads_MGX233dapSNcmfquT4uP_image.webp)  
+
+3. 3.  
+Log in to Microsoft Teams with the account you would like to test your bot in.
+
+4. 4.  
+Click **Apps** in the left sidebar (one of the last options)
+
+5. 5.  
+Click **Manage your apps** (at the bottom of the App categories sidebar).
+
+6. 6.  
+Click **Upload an app** and **Upload your app to your org's app catalog**.
+
+7. 7.  
+Select the .zip file with your app's package. After a successful upload, you will be navigated to the "Built for your org" page.
+
+8. 8.  
+Select the name of your app in the list.
+
+9. 9.  
+Click **Add** and **Add to a team**.  
+![](/images/cobalt/reference/integration-catalogue/image.png)  
+
+10. 10.  
+Select a team and channel to add your bot.
+
+### Add the Redirect URL to your Microsoft Teams app
+
+Cobalt provides a redirect URL to send information to your app. To add the redirect URL to your Microsoft Teams app:
+
+1. 1.  
+Copy the link under "**Redirect URL**" in your integration settings in Cobalt. The Redirect URL is `https://api.gocobalt.io/api/v1/ms/callback`
+
+2. 2.  
+Log in to the [Microsoft Azure Portal](https://azure.microsoft.com/) using your Microsoft account.
+
+3. 3.  
+Navigate to **All Services > App Registrations** and select the app registration _representing your bot, not your Microsoft Teams app_.You can check to make sure that the ID matches the one you selected for your associated bot:_In Developer Portal for Teams > \[Your App\] > App Features:_  
+![](/images/cobalt/reference/integration-catalogue/Screenshot%202023-03-07%20at%204.02.21%20PM.png)  
+_In Azure Portal > App Registrations:_  
+![](/images/cobalt/reference/integration-catalogue/image.png)
+
+4. 4.  
+Select **Authentication** from the sidebar.
+
+5. 5.  
+Under **Platform configurations**, press the **"Add a platform"** button.
+
+6. 6.  
+Select the **Web** platform.
+
+7. 7.  
+Paste the Redirect URL from Step 1 under Redirect URIs.
+
+8. 8.  
+Press the **Save** button at the top of the page.
+
+### Generate a Client Secret
+
+Since Microsoft Teams does not automatically provide you with a Client Secret for your application, we'll need to make one. To get your Client Secret:
+
+1. 1.  
+Navigate to **All Services > App Registrations** and select the app registration _representing your bot, not your Microsoft Teams app_.You can check to make sure that the ID matches the one you selected for your associated bot:_In Developer Portal for Teams > \[Your App\] > App Features:_  
+![](/images/cobalt/reference/integration-catalogue/image.png)  
+_In Azure Portal > App Registrations:_  
+![](/images/cobalt/reference/integration-catalogue/image.png)  
+
+2. 2.  
+Navigate to **Manage > Certificates & secrets** in the sidebar.
+
+3. 3.  
+Under **Client Secrets**, click the **\+ New client secret** button.
+
+4. 4.  
+Name your client credentials and select an expiry that works best for your application. Press **Add** to create your credentials.
+
+5. 5.  
+Copy the displayed Client Secret under the **Value** column.
+
+### Add your Microsoft Teams app to Cobalt
+
+1\. Select **Microsoft Teams** from the **Integrations Catalog**.
+
+2\. Under **Integrations > Connected Integrations >** _**{YOUR\_APP}**_ **\>** **Settings**, fill out your credentials from the end of Step 1 and Step 2 in their respective sections:
+
+* **Client ID:** Found in the Microsoft Azure Portal, under App registrations > Application (client) ID. This should be the Client ID of the app registration _representing your bot, not your Microsoft Teams app._
+
+* **Client Secret:** See Generate a Client Secret.
+
+* **Bot External ID**: Found in the [Microsoft Developer Portal for Teams](https://dev.teams.microsoft.com/), as the **App ID:**  
+![](/images/cobalt/reference/integration-catalogue/image.png)  
+****
+
+* **Permissions:** Select the scopes you've requested for your application.

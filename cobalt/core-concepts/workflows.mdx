@@ -1,0 +1,42 @@
+---
+title: "Workflows"
+---
+
+Once your users have created a custom app to interact with your application, you can build workflows that connect data between your application and your users' apps. Cobalt's visual workflow builder allows you to create custom integrations that your users can activate in their integrations.
+
+Cobalt Workflows provide a visual abstraction layer on top of third-party APIs, making it easy to build integrations without specific knowledge of each API provider. Workflows consist of a **trigger**, which determines how a workflow is initiated, and **steps**, which represent an action that's performed as part of the workflow.
+
+
+{{Image/Video}}
+
+
+
+Here are some common step types that can get you started building workflows: 
+
+* Triggers - Trigger nodes are critical for your workflows. You can choose a Trigger Event inside a trigger block to set the workflow in motion.
+
+* Integration Action - These nodes are used to connect external apps such as slack, gmail, google sheet etc
+
+* Workflow Action - Internal automation node such as setting up a time delay, sending https request or creating a conditional for further actions.
+
+## When to use Workflows
+
+In general, Workflows are the way that integrations are built with Cobalt. When deciding when to use Workflows or the **Connect API**, Workflows are often best suited for common use cases including:
+
+* Pushing data from your application to your users' apps
+
+* Receiving new or updated data from your users' apps (Webhooks)
+
+* Allowing your users to configure integration options with custom fields
+
+* Enabling non-engineering teams (e.g. Product or Client Services teams) to configure integrations without writing code
+
+Here are some common examples of specific Workflows for a few integrations:
+
+* **Slack** \-Send notifications from your application to Slack
+
+* **Salesforce** \- Sync contacts from your application to Salesforce
+
+* **HubSpot** \- Sync contacts HubSpot to your application
+
+* **Google Calendar** \- Create Google Calendar events from events in your application

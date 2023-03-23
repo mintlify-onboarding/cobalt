@@ -1,0 +1,109 @@
+---
+title: "Create a linked account"
+---
+
+### Step 1: Initialising SDK
+
+The best way to interact with our API is to use one of our official SDK. You can find the detailed documentation here:
+
+[![](/images/cobalt/getting-started)npm: @cobaltio/cobaltnpm](https://www.npmjs.com/package/@cobaltio/cobalt)
+
+Node JS SDK
+
+Javascript
+
+Typescript
+
+```
+# Install via NPM
+npm i @cobaltio/cobalt
+
+# Getting Started
+const Cobalt = require('@cobaltio/cobalt');
+
+const Client = new Cobalt({
+    apiKey:""
+});
+
+```
+
+```
+# Install via NPM
+npm i @cobaltio/cobalt
+
+#Getting started
+import Cobalt from '@cobaltio/cobalt';
+
+const Client:Cobalt = new Cobalt({
+    apiKey:""
+});
+
+```
+
+You can find your [api key from here](https://gocobalt.io/account?tab=API)
+
+****
+
+### Step 2: Creating Linked Account
+
+Whenever a new user or organisation signs up on your platform, use the below call to create a linked account. If there are multiple users in an organisation DO NOT create linked account for all the users. In this case create linked account incase of a new organisation.
+
+Linked account creation should always happen server-side to prevent token leakage.
+
+```
+## The below API implementation supports the following parameters:
+
+linked_account_id (Mandatory): String,
+payload (Optional): {
+    name (Optional): String,
+    udf (Optional): Record<string, any>,
+    your_app (Optional): {
+        app_id (Mandatory): String,
+        auth_credentials (Mandatory): Record<string, any>
+    }
+}</string,></string,>
+```
+
+Javascript
+
+```
+# Create linked account when user signs up
+/**
+ * Create Linked Accounts
+ * @param {String} linked_account_id expects unique id
+ * @param {Object} payload - Optional Data for the linked account
+ * @returns {Promise}
+ */
+ 
+const createLinkedAccount = async (linked_account_id) => {
+    try{
+        return await Client.createLinkedAccount({
+            linked_account_id: linked_account_id,
+            payload:{
+                name: "",
+                udf:{
+                    "":"",
+                    "":"",
+                    "":""
+                },
+                app:{
+                    app_id:"",
+                    auth_credentials:{
+                        "
+
+": ""
+                    }
+                }
+            }
+        })
+    }catch(error){
+        //Catch any error
+    }
+};
+
+```
+
+You will be able to see the accounts created under the linked account section for each new sign up. 
+
+![](/images/cobalt/getting-started/Screenshot%202022-10-18%20at%201.24.44%20PM.png)
+

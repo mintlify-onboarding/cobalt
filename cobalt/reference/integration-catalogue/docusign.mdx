@@ -1,0 +1,53 @@
+---
+title: "Docusign"
+---
+
+### 1\. Create a developer account
+
+URL: [https://account-d.docusign.com](https://account-d.docusign.com)
+
+Depending on the DocuSign APIs you plan to work with, you may need to take additional steps to gain access to your desired functionality.
+
+* For the eSignature REST API, DocuSign Admin API, Click API, Monitor API, Rooms API, and other APIs, you can create a developer account to gain access.
+
+### 2\. Add an app
+
+Next, you add an app to your developer account. On the DocuSign platform, an app is a set of parameters that are used to identify and configure an integration.
+
+* You can add an app manually, setting configuration values and choosing your authentication type in the UI through the Apps and Keys page.
+
+* Click Apps and key under Authentication mentioned in sidebar
+
+![](https://lh6.googleusercontent.com/TRc8OthlgFLiQ3buRzDmWkKI4LcTtwRYk2koXy0-o6jXcwe0rAxc5cVwfMZD_j8v26aWKBhoeYhQsTGYZlccMaFTl4t_MJUWXGtDMxV0FAnBxJs6QJVmcFmSDoGha8XpoDtxHyiAIrkfKM3Mi9cXVX0)
+
+Select an OAuth authentication type
+
+After you create an app, you choose an OAuth authentication type for your app. DocuSign supports three OAuth 2.0 grant types for obtaining access tokens, each designed for use with a specific type of integration.
+
+* Click Actions and Click on Edit
+
+* Click on Add Secret Key
+
+![](https://lh4.googleusercontent.com/u-C1LraaRZgD0ut2HbEgaWq4UBpfUR1zx_okQBZ7Mtu3Mh_yLj9pAOUoqCtFFH-N2JPaAs5rEzpUlI2Etj0UlrOcobRhNrEA6blPVGZ1VPIp9ZVc0rSURSPynLccgqsFyrb_vnfd6ncajq4BNL2okJ8)
+
+![](https://lh3.googleusercontent.com/cyMX3N_XvAmEo1ZJ_hF3G2tZ3dlNU_UqujU7ZR0paVSY0qIsxhpey75LmoDPAyMHmITtL0KuW7TVtS4FMjDOxcC1BlKcsqBMF66mpfXsHqzGiIKMk8VkFcalscfZMmsMXHj7E7GK3Rsw9WUU1JQcpuQ)
+
+### 3\. Configure your app
+
+After you choose an OAuth type, you may configure the following settings for your app.
+
+**Integration key & Secret** must be entered in Client ID field of Cobalt 
+
+Redirect URI must be entered in the redirect URI in Docusign as shown below: `https://api.gocobalt.io/api/v1/docusign/callback`
+
+![](https://lh5.googleusercontent.com/R8TVriO4df0r-WTHZqNxxp_jlcyEAU9vgLrxYrauSgdL5YTCpWh_y1N2XYZZ4QCUxERkOpcE4i4XffinJTTm9s3GT4HMYTFs0q6zBYAbbE5cu4oLBxxzS7hsY7lPHHFxdVRKMoZL06MgL-6PxJLgdZw)
+
+Below mentioned data is found in Apps and keys page which are required for integration
+
+* API Account ID- API account ID mentioned in My account information in Apps and keys page
+
+* Secret Key - Mentioned in Authentication in Apps and keys page
+
+* Integration Key - Mentioned in Apps and integration in Apps and keys page
+
+* Account Base URI - mentioned in My account information in Apps and keys page
