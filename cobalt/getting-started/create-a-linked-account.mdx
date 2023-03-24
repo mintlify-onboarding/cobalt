@@ -4,17 +4,23 @@ title: "Create a linked account"
 
 ### Step 1: Initialising SDK
 
-The best way to interact with our API is to use one of our official SDK. You can find the detailed documentation here:
+The best way to interact with our API is to use one of our official SDK. You can
+find the detailed documentation here:
 
-[![](/images/cobalt/getting-started)npm: @cobaltio/cobaltnpm](https://www.npmjs.com/package/@cobaltio/cobalt)
+<Card
+  title="npm: @cobaltio/cobaltnpm"
+  icon="npm"
+  color="red"
+  href="https://www.npmjs.com/package/@cobaltio/cobalt"
+>
+  Node JS SDK
+</Card>
 
-Node JS SDK
+<br />
 
-Javascript
+<CodeGroup>
 
-Typescript
-
-```
+```js Javascript
 # Install via NPM
 npm i @cobaltio/cobalt
 
@@ -27,7 +33,7 @@ const Client = new Cobalt({
 
 ```
 
-```
+```ts Typescript
 # Install via NPM
 npm i @cobaltio/cobalt
 
@@ -37,20 +43,31 @@ import Cobalt from '@cobaltio/cobalt';
 const Client:Cobalt = new Cobalt({
     apiKey:""
 });
-
 ```
 
-You can find your [api key from here](https://gocobalt.io/account?tab=API)
+</CodeGroup>
 
-****
+<br />
+
+<Note>
+  You can find your [API key from here](https://gocobalt.io/account?tab=API)
+</Note>
+
+---
 
 ### Step 2: Creating Linked Account
 
-Whenever a new user or organisation signs up on your platform, use the below call to create a linked account. If there are multiple users in an organisation DO NOT create linked account for all the users. In this case create linked account incase of a new organisation.
+Whenever a new user or organisation signs up on your platform, use the below
+call to create a linked account. If there are multiple users in an organisation
+DO NOT create linked account for all the users. In this case create linked
+account incase of a new organisation.
 
-Linked account creation should always happen server-side to prevent token leakage.
+<Note>
+  Linked account creation should always happen server-side to prevent token
+  leakage.
+</Note>
 
-```
+```ts
 ## The below API implementation supports the following parameters:
 
 linked_account_id (Mandatory): String,
@@ -64,9 +81,7 @@ payload (Optional): {
 }</string,></string,>
 ```
 
-Javascript
-
-```
+```js Javascript
 # Create linked account when user signs up
 /**
  * Create Linked Accounts
@@ -74,7 +89,7 @@ Javascript
  * @param {Object} payload - Optional Data for the linked account
  * @returns {Promise}
  */
- 
+
 const createLinkedAccount = async (linked_account_id) => {
     try{
         return await Client.createLinkedAccount({
@@ -103,7 +118,7 @@ const createLinkedAccount = async (linked_account_id) => {
 
 ```
 
-You will be able to see the accounts created under the linked account section for each new sign up. 
+You will be able to see the accounts created under the linked account section
+for each new sign up.
 
-![](/images/cobalt/getting-started/Screenshot%202022-10-18%20at%201.24.44%20PM.png)
-
+![](/images/cobalt/getting-started/linked-account.png)

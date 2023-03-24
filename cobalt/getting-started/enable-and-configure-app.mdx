@@ -4,59 +4,65 @@ title: "Enable & configure App"
 
 ### Step 1: Enable Apps
 
-Go to the [**Apps**](https://app.gocobalt.io/apps) page in the Cobalt dashboard. You'll see a list of the available apps. Choose a couple of apps to enable. The apps you enable become available to your end users. 
+Go to the [**Apps**](https://app.gocobalt.io/apps) page in the Cobalt dashboard.
+You'll see a list of the available apps. Choose a couple of apps to enable. The
+apps you enable become available to your end users.
 
-![](/images/cobalt/getting-started/Screenshot%202023-01-16%20at%204.44.43%20PM.png)
+![](/images/cobalt/getting-started/enable-configure-1.png)
 
-![](/images/cobalt/getting-started/Screenshot%202023-01-16%20at%204.45.34%20PM.png)
+![](/images/cobalt/getting-started/enable-configure-2.png)
 
-By default, all connectors use sandbox OAuth apps from Cobalt. This makes it easy for you to get started and connect integrations right away.
+By default, all connectors use sandbox OAuth apps from Cobalt. This makes it
+easy for you to get started and connect integrations right away.
 
-![](/images/cobalt/getting-started/Screenshot%202023-01-16%20at%205.18.35%20PM.png)
+![](/images/cobalt/getting-started/enable-configure-3.png)
 
-Once you're ready to ship your integrations with Cobalt, you should use your own OAuth apps. Cobalt supports bringing your own OAuth clients for supported services by configuring them in our dashboard. This will make sure users see **your brand** instead of Cobalt when they connect integrations.
+Once you're ready to ship your integrations with Cobalt, you should use your own
+OAuth apps. Cobalt supports bringing your own OAuth clients for supported
+services by configuring them in our dashboard. This will make sure users see
+**your brand** instead of Cobalt when they connect integrations.
 
 ### Step 2: Create a Workflow
 
-You can build workflows that connect data between your application and your users' apps. Cobalt's visual workflow builder allows you to create custom integrations that your users can activate in their integrations.
+You can build workflows that connect data between your application and your
+users' apps. Cobalt's visual workflow builder allows you to create custom
+integrations that your users can activate in their integrations.
 
-Cobalt Workflows provide a visual abstraction layer on top of third-party APIs, making it easy to build integrations without specific knowledge of each API provider. Workflows consist of a **trigger**, which determines how a workflow is initiated, and **steps**, which represent an action that's performed as part of the workflow.
+Cobalt Workflows provide a visual abstraction layer on top of third-party APIs,
+making it easy to build integrations without specific knowledge of each API
+provider. Workflows consist of a **trigger**, which determines how a workflow is
+initiated, and **steps**, which represent an action that's performed as part of
+the workflow.
 
-![](/images/cobalt/getting-started/Screenshot%202022-10-18%20at%201.38.34%20PM.png)
+![](/images/cobalt/getting-started/enable-configure-4.png)
 
 Learn how to setup your first workflow here:
 
-[Workflows](/cobalt/core-concepts/workflows)
+<Card title="Workflows" icon="file" href="/cobalt/core-concepts/workflows" />
 
+Here are some common step types that can get you started building workflows:
 
-Here are some common step types that can get you started building workflows: 
-
-* **Triggers** \- used to trigger a specific workflow
-
-* **Integration actions** \- perform an action in your users' connected app account, like sending a Slack message or querying contacts from Salesforce
-
-* **Requests** \- make a request to any API, such as posting data to your application server
-
-* **Conditionals** \- add conditional branching logic to your workflows
+- **Triggers** - used to trigger a specific workflow
+- **Integration actions** - perform an action in your users' connected app
+  account, like sending a Slack message or querying contacts from Salesforce
+- **Requests** - make a request to any API, such as posting data to your
+  application server
+- **Conditionals** - add conditional branching logic to your workflows
 
 #### When to use Workflows
 
 Workflows are often best suited for common use cases including:
 
-* Pushing data from your application to your users' apps
-
-* Receiving new or updated data from your users' apps (Webhooks)
-
-* Allowing your users to configure integration options with custom fields
-
-* Enabling non-engineering teams (e.g. Product or Client Services teams) to configure integrations without writing code
+- Pushing data from your application to your users' apps
+- Receiving new or updated data from your users' apps (Webhooks)
+- Allowing your users to configure integration options with custom fields
+- Enabling non-engineering teams (e.g. Product or Client Services teams) to
+  configure integrations without writing code
 
 Here are some common examples of specific Workflows for a few integrations:
 
-* **Slack** \-Send notifications from your application to Slack
-
-* **Salesforce** \- Sync contacts from your application to Salesforce
-
-* **HubSpot** \- Sync contacts HubSpot to your application
-
-* **Google Calendar** \- Create Google Calendar events from events in your application
+- **Slack** -Send notifications from your application to Slack
+- **Salesforce** - Sync contacts from your application to Salesforce
+- **HubSpot** - Sync contacts HubSpot to your application
+- **Google Calendar** - Create Google Calendar events from events in your
+  application
