@@ -1,51 +1,63 @@
 ---
 title: "Setup App Events"
+description:
+  "App Events are custom events that are sent programmatically from your
+  application via the API to trigger Workflows."
 ---
 
-App Events are custom events that are sent programmatically from your application via the API to trigger Workflows. 
-
-For example, you might send a "Contact Created" App Event from your application to trigger a Workflow that creates a matching contact in your users' Salesforce CRM.
+For example, you might send a "Contact Created" App Event from your application
+to trigger a Workflow that creates a matching contact in your users' Salesforce
+CRM.
 
 **Create an event**
 
-To create an event, go to the [**Your App** ![](/images/cobalt/getting-started/image.png)](https://app.gocobalt.io/your-app)page in Cobalt dashboard. Under the event tab click on add new event. Next, enter the name and event schema of your Event. The **event schema** that you enter here should be an example payload sent from your application to Cobalt.
+To create an event, go to the [Your App](https://app.gocobalt.io/your-app) page
+in Cobalt dashboard. Under the event tab click on add new event. Next, enter the
+name and event schema of your Event. The **event schema** that you enter here
+should be an example payload sent from your application to Cobalt.
 
-The **event schema** must be a valid JSON object, and can contain any arbitrary JSON.
+<Note>
+  The **event schema** must be a valid JSON object, and can contain any
+  arbitrary JSON.
+</Note>
 
-![](/images/cobalt/getting-started/Screenshot%202023-01-16%20at%203.38.42%20PM.png)
+![](/images/cobalt/getting-started/setup-app-events-1.png)
 
-App Events can be sent from your application using the REST API to the below endpoint unique to your application.
+App Events can be sent from your application using the REST API to the below
+endpoint unique to your application.
 
-![](/images/cobalt/getting-started/Untitled%20design.png)
+![](/images/cobalt/getting-started/setup-app-events-2.png)
 
 You must pass two parameters:
 
-* **name** \- the event name defined in your App Event
+- **name** - the event name defined in your App Event
 
-* **payload** \- the event payload that should match the event schema defined in your App Event
+- **payload** - the event payload that should match the event schema defined in
+  your App Event
 
-See the code examples below for how to send App Events using the Cobalt SDK or API.
+See the code examples below for how to send App Events using the Cobalt SDK or
+API.
 
-REST API
-
-```
+```json REST API
 // Trigger the "Contact Created" App Event
 POST https://api.gocobalt.io/api/v1/webhook/
 
 // Headers
-x-api-key: 
+x-api-key:
 Content-Type: application/json
-linked_account_id: 
-config_id (optional): 
+linked_account_id:
+config_id (optional):
 
-{ 
+{
     "linked_account_id": ,
     "trigger_name": "Contact Created",
-    "payload": { 
-        "name": "Abhishek", 
-        "email": "abhishek@gocobalt.io" 
-    } 
+    "payload": {
+        "name": "Abhishek",
+        "email": "abhishek@gocobalt.io"
+    }
 }
 ```
 
-You can copy your exact payload once you save the event on the cobalt dashboard. When sending live events from your application, Cobalt will not validate that your event payload matches the defined event schema.
+You can copy your exact payload once you save the event on the cobalt dashboard.
+When sending live events from your application, Cobalt will not validate that
+your event payload matches the defined event schema.

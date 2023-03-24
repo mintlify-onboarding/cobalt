@@ -48,7 +48,7 @@
       ]
     },
     {
-      "group": "Core Concepts",
+      "group": "Guides",
       "pages": [
         "cobalt/core-concepts/linked-account",
         "cobalt/core-concepts/default-apps",
@@ -79,7 +79,6 @@
             "cobalt/core-concepts/advance-concepts/authenticated-passthrough-request"
           ]
         },
-
         "cobalt/core-concepts/workflows",
         "cobalt/core-concepts/advance-concepts"
       ]
@@ -89,7 +88,11 @@
       "pages": ["cobalt/sdks/backend-sdks", "cobalt/sdks/frontend-sdk"]
     },
     {
-      "group": "Reference",
+      "group": "Apps",
+      "pages": ["cobalt/"]
+    },
+    {
+      "group": "API Reference",
       "pages": [
         {
           "group": "Integration Catalogue",
