@@ -41,46 +41,62 @@
     {
       "group": "Getting Started",
       "pages": [
+        "cobalt/getting-started/create-a-linked-account",
         "cobalt/getting-started/setup-app-events",
         "cobalt/getting-started/enable-and-configure-app",
-        "cobalt/getting-started/create-a-linked-account",
         "cobalt/getting-started/add-to-your-frontend"
       ]
     },
     {
       "group": "Guides",
       "pages": [
-        "cobalt/core-concepts/linked-account",
-        "cobalt/core-concepts/default-apps",
+        {
+          "group": "Cobalt Basics",
+          "pages": [
+            "cobalt/core-concepts/linked-account",
+            "cobalt/core-concepts/logs",
+            "cobalt/core-concepts/default-apps",
+            "cobalt/core-concepts/authentication"
+          ]
+        },
+
         {
           "group": "User Portal",
           "pages": [
             "cobalt/core-concepts/user-portal",
-            "cobalt/core-concepts/user-portal/configure",
-            "cobalt/core-concepts/user-portal/field-select",
-            "cobalt/core-concepts/user-portal/field-dependent",
-            "cobalt/core-concepts/user-portal/field-mapping"
+            "cobalt/core-concepts/user-portal/customising-portal",
+            "cobalt/core-concepts/user-portal/data-types",
+            "cobalt/core-concepts/user-portal/dynamic-mapping"
           ]
         },
         {
           "group": "Workflows",
           "pages": [
             "cobalt/core-concepts/workflows",
-            "cobalt/core-concepts/workflowscreating-a-workflow/",
             "cobalt/core-concepts/workflows/triggers",
-            "cobalt/core-concepts/workflows/integration-actions",
-            "cobalt/core-concepts/workflows/workflow-actions"
+            "cobalt/core-concepts/workflows/utility",
+            "cobalt/core-concepts/workflows/integration-actions"
+          ]
+        },
+        {
+          "group": "Building Frontend",
+          "pages": [
+            "cobalt/core-concepts/building-frontend/",
+            "cobalt/core-concepts/building-frontend/react",
+            "cobalt/core-concepts/building-frontend/custom",
+            "cobalt/core-concepts/building-frontend/mapping",
+            "cobalt/core-concepts/building-frontend/dependent",
+            "cobalt/core-concepts/building-frontend/selection"
           ]
         },
         {
           "group": "Advance Concepts",
           "pages": [
-            "cobalt/core-concepts/advance-concepts/custom-apps",
-            "cobalt/core-concepts/advance-concepts/authenticated-passthrough-request"
+            "cobalt/core-concepts/advance-concepts",
+            "cobalt/core-concepts/advance-concepts/pagination",
+            "cobalt/core-concepts/advance-concepts/custom-apps"
           ]
-        },
-        "cobalt/core-concepts/workflows",
-        "cobalt/core-concepts/advance-concepts"
+        }
       ]
     },
     {
@@ -89,37 +105,30 @@
     },
     {
       "group": "Apps",
-      "pages": ["cobalt/"]
+      "pages": [
+        {
+          "group": "List of apps by categories",
+          "pages": [
+            "cobalt/apps/sales",
+            "cobalt/apps/crm",
+            "cobalt/apps/hris",
+            "cobalt/apps/marketing",
+            "cobalt/apps/accounting"
+          ]
+        }
+      ]
     },
     {
       "group": "API Reference",
       "pages": [
         {
-          "group": "Integration Catalogue",
+          "group": "Cobalt Basic APIs",
           "pages": [
-            "cobalt/reference/integration-catalogue",
-            "cobalt/reference/integration-catalogue/activecampaign",
-            "cobalt/reference/integration-catalogue/docusign",
-            "cobalt/reference/integration-catalogue/pipedrive",
-            "cobalt/reference/integration-catalogue/hubspot",
-            "cobalt/reference/integration-catalogue/salesforce",
-            "cobalt/reference/integration-catalogue/mailerlite",
-            "cobalt/reference/integration-catalogue/microsoft-onedrive",
-            "cobalt/reference/integration-catalogue/microsoft-teams",
-            "cobalt/reference/integration-catalogue/sendinblue",
-            "cobalt/reference/integration-catalogue/keap",
-            "cobalt/reference/integration-catalogue/mailchimp",
-            "cobalt/reference/integration-catalogue/gmail",
-            "cobalt/reference/integration-catalogue/google-calendar",
-            "cobalt/reference/integration-catalogue/google-docs",
-            "cobalt/reference/integration-catalogue/google-drive",
-            "cobalt/reference/integration-catalogue/google-sheet",
-            "cobalt/reference/integration-catalogue/quickbooks",
-            "cobalt/reference/integration-catalogue/slack",
-            "cobalt/reference/integration-catalogue/twilio"
+            "cobalt/reference/basic-api/create-linked-account",
+            "cobalt/reference/basic-api/link-token",
+            "cobalt/reference/basic-api/send-event"
           ]
-        },
-        "cobalt/reference/api-reference"
+        }
       ]
     }
   ],
