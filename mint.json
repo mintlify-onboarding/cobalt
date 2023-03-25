@@ -91,7 +91,6 @@
         {
           "group": "Advance Concepts",
           "pages": [
-            "cobalt/core-concepts/advance-concepts",
             "cobalt/core-concepts/advance-concepts/pagination",
             "cobalt/core-concepts/advance-concepts/custom-apps"
           ]
@@ -120,12 +119,13 @@
     {
       "group": "API Reference",
       "pages": [
+        "reference/overview",
         {
           "group": "Cobalt Basic APIs",
           "pages": [
-            "cobalt/reference/basic-api/create-linked-account",
-            "cobalt/reference/basic-api/link-token",
-            "cobalt/reference/basic-api/send-event"
+            "reference/create-linked-account",
+            "reference/link-token",
+            "reference/send-event"
           ]
         }
       ]
