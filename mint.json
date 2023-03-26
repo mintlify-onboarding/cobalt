@@ -24,7 +24,7 @@
   "anchors": [
     {
       "name": "Demo",
-      "icon": "circle-play",
+      "icon": "video",
       "url": "https://cal.com/cobalt/30min?duration=30"
     },
     {
